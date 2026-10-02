@@ -50,3 +50,11 @@ app.*.map.json
 # Build and SDK downloads
 flutter/
 *.tar.xz
+
+# Firebase Admin Service Account Keys & Secrets
+*firebase-adminsdk*.json
+serviceAccountKey.json
+.env
+.env.*
+!backend/.env.example
+
