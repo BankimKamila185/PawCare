@@ -157,7 +157,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 ),
                                 const SizedBox(width: 4),
                                 Text(
-                                  '${adoptedPets.length} ${adoptedPets.length == 1 ? "Pet" : "Pets"} Adopted • ${user?.location ?? "Austin, TX"}',
+                                  '${adoptedPets.length} ${adoptedPets.length == 1 ? "Pet" : "Pets"} Adopted • ${user?.location ?? "Bengaluru, Karnataka"}',
                                   style: const TextStyle(
                                     fontSize: 11,
                                     fontWeight: FontWeight.w600,
@@ -262,6 +262,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: AppColors.primary,
                                     foregroundColor: Colors.white,
+                                    minimumSize: Size.zero,
+                                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                                     padding: const EdgeInsets.symmetric(horizontal: 14),
                                     shape: const StadiumBorder(),
                                   ),

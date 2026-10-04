@@ -11,7 +11,7 @@ class User {
     required this.name,
     required this.email,
     required this.password,
-    this.location = 'Austin, TX',
+    this.location = 'Bengaluru, KA',
     this.profileImageUrl,
   });
 
@@ -32,7 +32,7 @@ class User {
       name: json['name'] as String? ?? '',
       email: json['email'] as String? ?? '',
       password: json['password'] as String? ?? '',
-      location: json['location'] as String? ?? 'Austin, TX',
+      location: json['location'] as String? ?? 'Bengaluru, KA',
       profileImageUrl: json['profileImageUrl'] as String?,
     );
   }

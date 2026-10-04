@@ -512,7 +512,7 @@ class _AddVaccinationScreenState extends State<AddVaccinationScreen> {
                   controller: _notesController,
                   maxLines: 3,
                   decoration: InputDecoration(
-                    hintText: 'e.g. Administered by Dr. Smith at Austin Animal Clinic. 1ml subcutaneous.',
+                    hintText: 'e.g. Administered by Dr. Sharma at Cessna Lifeline Vet Hospital, Bengaluru. Nobivac batch #IN-2026.',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(16),
                       borderSide: BorderSide.none,

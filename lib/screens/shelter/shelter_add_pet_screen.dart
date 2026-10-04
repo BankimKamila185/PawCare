@@ -20,8 +20,8 @@ class _ShelterAddPetScreenState extends State<ShelterAddPetScreen> {
   final _breedController = TextEditingController();
   final _ageController = TextEditingController(text: '1 Year');
   final _descriptionController = TextEditingController();
-  final _shelterNameController = TextEditingController(text: 'Happy Tails Shelter');
-  final _locationController = TextEditingController(text: 'Austin, TX');
+  final _shelterNameController = TextEditingController(text: 'CUPA Rescue Center');
+  final _locationController = TextEditingController(text: 'Bengaluru, KA');
 
   PetGender _selectedGender = PetGender.male;
   PetCategory _selectedCategory = PetCategory.dogs;
@@ -30,10 +30,14 @@ class _ShelterAddPetScreenState extends State<ShelterAddPetScreen> {
   bool _isLoading = false;
 
   final List<String> _sampleImages = [
-    'https://lh3.googleusercontent.com/aida-public/AB6AXuAZaNYhpcLX-1zVFpzTQ2f9RqI6WLFkgRDIPcOcoF84_aRvBguBk7irYZZ1JiS2E1cNBnDsnIOstU_vK6XLvycugCL1IhbnKzJz-fLTkz6QhCaV-y_KO9C16p44eQiyuLbEivv5QqyFJD-E0HAPj9c5wFdh5bkatThFVC-k4ILpoiPp8RAASPNPR96m2UFpt1hS9ezlW7Bk7xsZ91WzZx5VLtdcdmZ8u40YNd-yqF-z6opKg5AcJMES',
-    'https://lh3.googleusercontent.com/aida-public/AB6AXuAY3L3DSoYaaVwPYFhZe184vpyqtHbv-y0RH5nQ27qkj53kP92LHZV4kWEqyJ263riHnUuMHHPd1ItpOpLG22640p-pUBdVGslUr4kszCZqo0g5irpQSDNqi-xjh1TYDwZcQtmNnhdLW6yd1XcpnkJkCzEcfBSyz8DxTce8FVPxlimBVP5k6aaNIJwEAuRwTI4njW1_MIuucplmbBXKB-tpV6OPTYRtGVSb-zJ0TcZ4fGhyz47AKAqC',
-    'https://lh3.googleusercontent.com/aida-public/AB6AXuB8yGgGdlQ2QHBEmqR8mKmxvE2LRpXij4wKmzKwgVH_i8S0_HBeV4tRwY-9xEm4F6l-EgSsouEeCcIJVXKMbpIndSeXmQ6WUm1y4fYwWCkfuBvUnaV8yZkNtsvgz0Dm1AAbn-dWZRoe5-TTVLOcMwsG9ca4TigYszsEXmrelhFON9wj9mxUBt6u_bkgO2-8Vy75uSwyLmBb_v-p58e_BgsEMuJrdjlc-CngHXGTjdRP6F46o-J9nPTW',
-    'https://lh3.googleusercontent.com/aida-public/AB6AXuCY_-bauQpsREvIdsmHPaY__JNMLZYO11u_ipAaEHiEaLU4nPDjNIXlPaHzXDS93Nd3uMOpDMpgk9anPkqqBVfYeTxNX9dsnAiuy42P_wqLucl6JLJdi4PBNPy4Pb0XR2bzdDMGhxos573w5NMsDkrgHhvB3To3AYih1M1UYyFD7FbPzeOWZjLY3TZVnDSi7FfPDdljXly5GVJCN4pGkwlbeSRSUZ_DQy3Vt1q1zd52wPrTzBei5XKQ',
+    'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=800&q=80',
   ];
 
   @override

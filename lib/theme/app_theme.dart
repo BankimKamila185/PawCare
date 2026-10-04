@@ -205,7 +205,6 @@ class AppTheme {
           backgroundColor: AppColors.primary,
           foregroundColor: AppColors.onPrimary,
           elevation: 0,
-          minimumSize: const Size.fromHeight(52),
           shape: const StadiumBorder(),
           textStyle: GoogleFonts.plusJakartaSans(
             fontSize: 15,

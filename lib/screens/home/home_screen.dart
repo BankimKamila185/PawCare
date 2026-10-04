@@ -47,6 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final allCount = petService.getAvailablePets(category: PetCategory.all).length;
     final dogsCount = petService.getAvailablePets(category: PetCategory.dogs).length;
     final catsCount = petService.getAvailablePets(category: PetCategory.cats).length;
+    final othersCount = petService.getAvailablePets(category: PetCategory.others).length;
 
     return Scaffold(
       backgroundColor: AppColors.surface,
@@ -78,7 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   SizedBox(width: 4),
                   Text(
-                    'Rescue & Adopt',
+                    'Rescue & Adopt India',
                     style: TextStyle(
                       fontSize: 11,
                       fontWeight: FontWeight.w700,
@@ -100,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             const SizedBox(height: 4),
             const Text(
-              'Give a loving pet a forever home.',
+              'Give a loving rescue animal across India a forever home.',
               style: TextStyle(
                 fontSize: 14,
                 color: AppColors.onSurfaceVariant,
@@ -133,6 +134,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   _buildCategoryChip(PetCategory.dogs, 'Dogs ($dogsCount)'),
                   const SizedBox(width: 8),
                   _buildCategoryChip(PetCategory.cats, 'Cats ($catsCount)'),
+                  const SizedBox(width: 8),
+                  _buildCategoryChip(PetCategory.others, 'Others ($othersCount)'),
                 ],
               ),
             ),

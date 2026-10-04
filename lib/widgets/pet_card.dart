@@ -158,6 +158,8 @@ class PetDiscoveryCard extends StatelessWidget {
                 backgroundColor: AppColors.primaryFixed,
                 foregroundColor: AppColors.onPrimaryFixedVariant,
                 elevation: 0,
+                minimumSize: Size.zero,
+                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 shape: const StadiumBorder(),
                 padding: EdgeInsets.zero,
               ),
