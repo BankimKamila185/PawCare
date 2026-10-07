@@ -49,7 +49,7 @@ class PetService extends ChangeNotifier {
         shelterName: 'CUPA Rescue Center',
         location: 'Indiranagar, Bengaluru, KA',
         distance: '2.4 km',
-        adoptionStatus: AdoptionStatus.available,
+        adoptionStatus: AdoptionStatus.adopted,
         tags: const ['Native Indian Breed', 'High Immunity', 'Loyal & Friendly', 'Apartment Friendly'],
         vaccinations: [
           Vaccination(
@@ -127,7 +127,7 @@ class PetService extends ChangeNotifier {
         shelterName: 'Friendicoes SECA',
         location: 'Defence Colony, New Delhi, DL',
         distance: '3.5 km',
-        adoptionStatus: AdoptionStatus.available,
+        adoptionStatus: AdoptionStatus.adopted,
         tags: const ['Family Friendly', 'Trained', 'Gentle Giant', 'Swimmer'],
         vaccinations: [
           Vaccination(

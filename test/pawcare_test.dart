@@ -81,27 +81,28 @@ void main() {
     test('Initializes with seed pets (Bruno, Luna, Max, Bella)', () {
       expect(petService.allPets.length, greaterThanOrEqualTo(4));
       final bruno = petService.allPets.firstWhere((p) => p.name == 'Bruno');
-      expect(bruno.adoptionStatus, equals(AdoptionStatus.available));
       expect(bruno.breed, equals('Golden Retriever'));
+      final bella = petService.allPets.firstWhere((p) => p.name == 'Bella');
+      expect(bella.adoptionStatus, equals(AdoptionStatus.available));
     });
 
-    test('Adopting Bruno moves him from Available Pets to My Pets and persists', () async {
-      final bruno = petService.allPets.firstWhere((p) => p.name == 'Bruno');
-      expect(petService.getAvailablePets().any((p) => p.id == bruno.id), isTrue);
-      expect(petService.getAdoptedPets().any((p) => p.id == bruno.id), isFalse);
+    test('Adopting Bella moves her from Available Pets to My Pets and persists', () async {
+      final bella = petService.allPets.firstWhere((p) => p.name == 'Bella');
+      expect(petService.getAvailablePets().any((p) => p.id == bella.id), isTrue);
+      expect(petService.getAdoptedPets().any((p) => p.id == bella.id), isFalse);
 
-      final success = await petService.adoptPet(bruno.id);
+      final success = await petService.adoptPet(bella.id);
       expect(success, isTrue);
 
-      // Now Bruno is adopted
-      expect(petService.getAvailablePets().any((p) => p.id == bruno.id), isFalse);
-      expect(petService.getAdoptedPets().any((p) => p.id == bruno.id), isTrue);
+      // Now Bella is adopted
+      expect(petService.getAvailablePets().any((p) => p.id == bella.id), isFalse);
+      expect(petService.getAdoptedPets().any((p) => p.id == bella.id), isTrue);
 
       // Reload from storage to verify real persistence
       final reloadedPets = storageService.loadPets();
       expect(reloadedPets, isNotNull);
-      final reloadedBruno = reloadedPets!.firstWhere((p) => p.id == bruno.id);
-      expect(reloadedBruno.adoptionStatus, equals(AdoptionStatus.adopted));
+      final reloadedBella = reloadedPets!.firstWhere((p) => p.id == bella.id);
+      expect(reloadedBella.adoptionStatus, equals(AdoptionStatus.adopted));
     });
 
     test('Adding a vaccination record updates history and persists', () async {
@@ -147,9 +148,9 @@ void main() {
       final dogs = petService.getAvailablePets(category: PetCategory.dogs);
       expect(dogs.every((p) => p.category == PetCategory.dogs), isTrue);
 
-      final searchResults = petService.getAvailablePets(query: 'bruno');
+      final searchResults = petService.getAvailablePets(query: 'bella');
       expect(searchResults.length, equals(1));
-      expect(searchResults.first.name, equals('Bruno'));
+      expect(searchResults.first.name, equals('Bella'));
     });
 
     test('Data survives service re-instantiation simulating app restart', () async {
